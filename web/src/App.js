@@ -1,27 +1,12 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import Menu from './Menu'
 
-class App extends React.Component{
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      title: null
-    }
-  }
-
-  componentDidMount() {
-    fetch('http://localhost:3001/api')
-      .then(res => res.json())
-      .then(data => this.setState({title: data.title}));
-  }y
-
+class App extends Component{
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-        </header>
-      </div>
+        <div className="App">
+          <Menu/>
+        </div>   
     );
   }
 }
