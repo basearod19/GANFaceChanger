@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap'
 
-class FaceResult extends Component{
+class Selfie2AnimeResult extends Component{
   constructor(props) {
     super(props);
     console.log('result')
@@ -25,7 +25,7 @@ class FaceResult extends Component{
             </div>
             <img src={'data:image/jpg;base64,' + this.props.location.state.data["img"]}/>
             <div>
-              <form action="https://psbgrad.duckdns.org:5000/faceDownload" method="POST" encType="multipart/form-data">
+              <form action="https://psbgrad.duckdns.org:5000/animeDownload" method="POST" encType="multipart/form-data">
                 <Button id="submit" color="warning" type="submit" size="lg">이미지 다운로드하기</Button>
               </form>
             </div>
@@ -36,4 +36,4 @@ class FaceResult extends Component{
   }
 }
 
-export default FaceResult;
+export default Selfie2AnimeResult;
